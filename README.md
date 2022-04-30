@@ -1,10 +1,10 @@
 # mkdocs-updater
-A docker container for automatically updating a mkdocs site using git. Supports pandoc-cite for mkdocs-bibtex.
+A docker container for automatically updating a mkdocs site using git.
 
 `docker pull sondregronas/mkdocs-updater`
 https://hub.docker.com/r/sondregronas/mkdocs-updater
 
-Installs packages `pandoc`, `pandoc-citeproc` which is needed for the plugin `mkdocs-bibtex`. Base image is `ubuntu:focal`
+Installs the packages `pandoc`, `pandoc-citeproc` which is required by some plugins. Base image is `ubuntu:focal`.
 
 Automatically (every 2 hours) performs a `git pull` on the `${REPO}`, runs `pip install -r requirements.txt` in said repo, then performs a `mkdocs build`. Outputs static html in `/site`.
 
@@ -26,7 +26,7 @@ services:
       - content:/usr/share/nginx/html
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "80:80"
 
 volumes:
   content:

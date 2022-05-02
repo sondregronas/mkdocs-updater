@@ -45,6 +45,9 @@ jobs:
           echo ::set-output name=docker_platforms::${{ env.platforms }}
           echo ::set-output name=docker_image::${{ env.docker-container }}
 
+      - name: Set Up QEMU
+        uses: docker/setup-qemu-action@v1
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
         id: buildx

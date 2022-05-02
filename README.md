@@ -1,8 +1,8 @@
 # mkdocs-updater
 [![Build Status](https://github.com/sondregronas/mkdocs-updater/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/sondregronas/mkdocs-updater/)
-[![GitHub latest commit](https://badgen.net/github/last-commit/sondregronas/mkdocs-updater)](https://GitHub.com/sondregronas/mkdocs-updater/commit/)
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/sondregronas/mkdocs-updater)
+[![GitHub latest commit](https://img.shields.io/github/last-commit/sondregronas/mkdocs-updater)](https://github.com/sondregronas/mkdocs-updater/commit/)
+[![GPLv3 license](https://img.shields.io/github/license/sondregronas/mkdocs-updater)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Docker](https://img.shields.io/docker/pulls/sondregronas/mkdocs-updater)](https://hub.docker.com/r/sondregronas/mkdocs-updater)
 [![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/u92RMis)
 
 A container for automatically updating a mkdocs site using Git.

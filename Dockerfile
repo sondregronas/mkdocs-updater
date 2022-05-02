@@ -1,11 +1,13 @@
-FROM ubuntu:focal
+ARG ARCH=amd64/
+FROM ${ARCH}ubuntu:focal
 
 LABEL org.opencontainers.image.source=https://github.com/sondregronas/mkdocs-updater
+LABEL maintainer="sondregronas"
 
-ENV REPO=
+ENV REPO=''
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
             cron \
             pandoc \
             pandoc-citeproc \
@@ -14,6 +16,7 @@ RUN apt update && apt install -y \
             git \
             && rm -rf /var/lib/apt/lists/*
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN mkdir /site \
     && python3 -m pip install mkdocs \
     ##
@@ -28,9 +31,6 @@ RUN mkdir /site \
     # Create Entrypoint script
     && touch docker-entrypoint.sh \
     && echo "sh /updater.sh" >> docker-entrypoint.sh \
-    && echo "cron -f" >> docker-entrypoint.sh \
-    ##
-    # Start cron
-    && service cron start
+    && echo "cron -f" >> docker-entrypoint.sh
 
 ENTRYPOINT ["sh", "docker-entrypoint.sh"]

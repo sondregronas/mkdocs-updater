@@ -1,5 +1,5 @@
 # mkdocs-updater
-[![Build Status](https://github.com/sondregronas/mkdocs-updater/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/sondregronas/mkdocs-updater/)
+[![Build Status](https://img.shields.io/github/workflow/status/sondregronas/mkdocs-updater/Docker%20Publish)](https://github.com/sondregronas/mkdocs-updater/)
 [![GitHub latest commit](https://img.shields.io/github/last-commit/sondregronas/mkdocs-updater)](https://github.com/sondregronas/mkdocs-updater/commit/)
 [![GPLv3 license](https://img.shields.io/github/license/sondregronas/mkdocs-updater)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![Docker](https://img.shields.io/docker/pulls/sondregronas/mkdocs-updater)](https://hub.docker.com/r/sondregronas/mkdocs-updater)

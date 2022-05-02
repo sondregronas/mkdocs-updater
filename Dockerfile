@@ -1,7 +1,7 @@
-ARG ARCH=amd64/
-FROM ${ARCH}ubuntu:focal
+FROM ubuntu:focal
 
 LABEL org.opencontainers.image.source=https://github.com/sondregronas/mkdocs-updater
+LABEL org.opencontainers.image.description="Automatically (every 2hrs) fetches mkdocs updates from GitHub and generates new static html."
 LABEL maintainer="sondregronas"
 
 ENV REPO=''

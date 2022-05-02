@@ -8,7 +8,8 @@ name: Docker Publish
 env:
   # ${{ github.repository }} = <account>/<repo>
   docker-container: ${{ github.repository }}
-  platforms: linux/amd64,linux/arm64/v8,linux/arm/v7
+  platforms: linux/amd64
+  # ,linux/arm64/v8,linux/arm/v7
 
 on:
   push:

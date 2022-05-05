@@ -22,6 +22,8 @@ services:
       - content:/site
     environment:
       - REPO=https://github.com/username/your-docs-repo
+#		Alternatively clone a specific branch
+#      - REPO=https://github.com/username/your-docs-repo -b branch
   http:
     image: nginx:latest
     volumes:
@@ -33,3 +35,8 @@ services:
 volumes:
   content:
 ```
+
+## Todo:
+- Make a GitHub build action for continuous delivery to GitHub pages, alternatively a webhook option to force updates on pushes for local deployments. [Existing solutions](https://github.com/marketplace/actions/deploy-mkdocs) running on `alpine` does work, but `pandoc` is not supported.
+- Only run `requirements.txt` when changes are detected.
+- Pop & replace `/docs` directory when environment variable `REPO` changes.

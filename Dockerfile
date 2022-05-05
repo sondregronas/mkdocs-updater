@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.source=https://github.com/sondregronas/mkdocs-upd
 LABEL org.opencontainers.image.description="Automatically (every 2hrs) fetches mkdocs updates from GitHub and generates new static html."
 LABEL maintainer="sondregronas"
 
-ENV REPO=https://github.com/sondregronas/mkdocs-updater -b example
+ENV REPO='https://github.com/sondregronas/mkdocs-updater -b example'
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \

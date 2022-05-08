@@ -25,7 +25,7 @@ RUN mkdir /site \
     && echo "git -C /docs pull || git clone \$REPO /docs" >> updater.sh \
     && echo "cd /docs" >> updater.sh \
     && echo "python3 -m pip install -r requirements.txt || echo 'No requirements.txt found'" >> updater.sh \
-    && echo "python3 -m mkdocs build -d /site" >> updater.sh \
+    && echo "python3 -m mkdocs build -q -d /site" >> updater.sh \
     && echo "0 */2 * * * sh /updater.sh" | crontab - \
     ##
     # Create Entrypoint script
